@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Utility App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .badge {
+            background-color: #f7df1e;
+            color: #000000;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+        h1 {
+            font-size: 1.5rem;
+            color: #f0f6fc;
+        }
+        .tool-box {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        textarea {
+            width: 100%;
+            height: 120px;
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            padding: 10px;
+            font-family: monospace;
+            resize: vertical;
+        }
+        textarea:focus {
+            outline: 1px solid #58a6ff;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            background-color: #238636;
+            color: #ffffff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover {
+            background-color: #2ea043;
+        }
+        .output {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            min-height: 50px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JS Text Tools</h1>
+            <span class="badge">JS.ORG</span>
+        </div>
+        <p style="color: #8b949e; margin-bottom: 15px;">JavaScript-alapú szöveg- és adatformázó segédprogram webes fejlesztőknek.</p>
+        
+        <div class="tool-box">
+            <textarea id="inputText" placeholder="Ird be a formázandó szöveget vagy JSON-t..."></textarea>
+            <div class="actions">
+                <button id="btnMinify">Minify JS / Text</button>
+                <button id="btnFormatJson">Format JSON</button>
+            </div>
+            <div class="output" id="outputResult">Az eredmény itt fog megjelenni...</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
